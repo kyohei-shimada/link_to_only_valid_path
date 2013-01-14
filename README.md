@@ -20,9 +20,9 @@ Or install it yourself as:
 
 In your views, you can use 'link_to_only_valid_path' helper. This helper is similar to 'link_to' helper.
 
-    <%= link_to_only_valid_path "[name]", "[url]" %>
+    <%= link_to_only_valid_path name, url, options %>
 
-If [url] is "http://...", "https://...", or valid routings, this helper return a link tag, otherwise this helper return [name].
+This helper return a link tag if url is "http://...", "https://...", or valid routings, otherwise this helper return name.
 :examples
 
     <%= link_to_only_valid_path "Example1", "http://example.com" %>
