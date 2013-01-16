@@ -1,7 +1,5 @@
 # LinkToOnlyValidPath
 
-TODO: Write a gem description
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,7 +20,7 @@ In your views, you can use 'link_to_only_valid_path' helper. This helper is simi
 
     <%= link_to_only_valid_path name, url, options %>
 
-This helper return a link tag if url is "http://...", "https://...", or valid routings, otherwise this helper return name.
+This helper return a link tag if url is "http://...", "https://...", or valid routings (by default), otherwise this helper return name.
 :examples
 
     <%= link_to_only_valid_path "Example1", "http://example.com" %>
@@ -31,6 +29,22 @@ This helper return a link tag if url is "http://...", "https://...", or valid ro
       #=> <a href="http://example.com" class="btn">Example2</a>
     <%= link_to_only_valid_path "Example3", disable_routing_path %>
       #=> "Example3"
+    <%= link_to_only_valid_path enable_routing_path do %>
+    	<div>innert element</div> 
+    <% end %>
+      #=> <a href="[enable_routing_path]"><div>inner element</div></a>
+    <%= link_to_only_valid_path disable_routing_path %>
+        <div>inner element</div>
+    <% end %>
+      #=> <div>inner element</div> # If the url disable, ignore a link tag.
+
+If you want to enable other protocols, you set a :accepts_protocols option.
+:examples
+
+    <%= link_to_only_valid_path "FTP Example1", "ftp://example.com" %>
+      #=> "FTP Example1"
+    <%= link_to_only_valid_path "FTP Example2", "ftp://example.com", { :accept_protocols => [:ftp] } %>
+      #=> <a href="ftp://example.com">FTP Example2</a>
 
 ## Contributing
 
