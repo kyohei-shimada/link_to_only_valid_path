@@ -21,6 +21,7 @@ In your views, you can use 'link_to_only_valid_path' helper. This helper is simi
     <%= link_to_only_valid_path name, url, options %>
 
 This helper return a link tag if url is "http://...", "https://...", or valid routings (by default), otherwise this helper return name.
+
 :examples
 
     <%= link_to_only_valid_path "Example1", "http://example.com" %>
@@ -39,6 +40,7 @@ This helper return a link tag if url is "http://...", "https://...", or valid ro
       #=> <div>inner element</div> # If the url disable, ignore a link tag.
 
 If you want to enable other protocols, you set a :accepts_protocols option.
+
 :examples
 
     <%= link_to_only_valid_path "FTP Example1", "ftp://example.com" %>
