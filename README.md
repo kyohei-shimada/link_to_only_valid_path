@@ -10,7 +10,7 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
@@ -18,7 +18,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In your views, you can use 'link_to_only_valid_path' helper. This helper is similar to 'link_to' helper. 
+
+    <%= link_to_only_valid_path "[name]", "[url]" %>
+
+If [url] is "http://...", "https://...", or valid routings, this helper return a link tag, otherwise this helper return [name].
+
+:examples
+    <%= link_to_only_valid_path "Example1", "http://example.com" #=> <a href="http://example.com">Example1</a> %>
+    <%= link_to_only_valid_path "Example2", "http://example.com" { :class => "btn" } #=> <a href="http://example.com" class="btn">Example2</b> %>
+    <%= link_to_only_valid_path "Example3", disable_routing_path #=> "Example3" %>
 
 ## Contributing
 
