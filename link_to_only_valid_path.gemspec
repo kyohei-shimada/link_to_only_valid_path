@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["fl95to03pj30sq12@gmail.com"]
   gem.description   = %q{link to only valid path}
   gem.summary       = %q{link to only valid path}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/wishid/link_to_only_valid_path"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
