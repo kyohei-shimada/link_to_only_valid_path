@@ -6,7 +6,7 @@ require 'link_to_only_valid_path/version'
 Gem::Specification.new do |gem|
   gem.name          = "link_to_only_valid_path"
   gem.version       = LinkToOnlyValidPath::VERSION
-  gem.authors       = ["wishid"]
+  gem.authors       = ["kyohei shimada"]
   gem.email         = ["fl95to03pj30sq12@gmail.com"]
   gem.description   = %q{link to only valid path}
   gem.summary       = %q{link to only valid path}
